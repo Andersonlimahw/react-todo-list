@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 
 const Todo = ({ onClick, completed, text }) => (
   <li
+    title="click to toggle todo"
     onClick={onClick}
     style={{
-      textDecoration: completed ? 'line-through' : 'none'
+      textDecoration: completed ? 'line-through' : 'none',
+      backgroundColor: completed ? '#dadada': '#fff'
     }}
   >
     {text}
