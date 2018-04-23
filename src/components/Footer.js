@@ -1,10 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import FilterLink from '../containers/FilterLink'
+import  { VisibilityFilters }  from '../actions'
 
-const Todo = ({}) => (
-    <li> </li>
+const Footer = () => (
+   <div className="footer">
+       <span>Show: </span>
+       <FilterLink filter={VisibilityFilters.SHOW_ALL}> 
+           All
+       </FilterLink>
+       <FilterLink filter={VisibilityFilters.SHOW_ACTIVE}> 
+           Active
+       </FilterLink>
+       <FilterLink filter={VisibilityFilters.SHOW_COMPLETED}> 
+           Completed
+       </FilterLink>
+   </div>
 )
 
-Todo.propTypes = {
-    text: PropTypes.string.isRequired
-}
+export default Footer
